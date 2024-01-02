@@ -31,6 +31,9 @@ class InternallyHeuristicPoliciesWrapper(Wrapper):
         self._heuristic_agents_policy = value
 
     def reset(self, **kwargs):
+        """
+        Reset the simulation and clear out any stored observations for the heuristic agents.
+        """
         super().reset(**kwargs)
         self.heuristic_agent_obs = {}
 
